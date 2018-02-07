@@ -67,7 +67,7 @@ for file=files'
         str10=['completion_rate.',filename,'=( size(data.',filename,'(:,1),1 ) )/image_count.i',filename(5:17),';'];
         eval(str10);
     end
-    str12=['total_rated_error.',filename,'=error_sum.',filename,'/completion_rate.',filename,';'];
+    str12=['total_rated_error.',filename,'=error_sum.',filename,'/sqrt(completion_rate.',filename,');'];
     eval(str12);
     
     % str13=['total_rated_error_perSurvey.',filename(5:10),'=error_sum.',filename,'/completion_rate.',filename,';'];
